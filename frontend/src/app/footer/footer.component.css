@@ -1,6 +1,7 @@
 footer {
-    position: fixed;
-    height: 100px;
+    /* position: fixed; */
+    margin-top: 50px;
+    height: 5px;
     bottom: 0;
     width: 100%;
 }

@@ -16,6 +16,9 @@ import {MatInputModule} from '@angular/material/input'
 import {MatIconModule} from '@angular/material/icon'
 import { FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { AkillsComponent } from './akills/akills.component';
+import { EducationComponent } from './education/education.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { ContactComponent } from './contact/contact.component';
     BodyComponent,
     FooterComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    AboutComponent,
+    AkillsComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,

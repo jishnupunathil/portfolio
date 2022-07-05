@@ -20,6 +20,7 @@ import { AboutComponent } from './about/about.component';
 import { AkillsComponent } from './akills/akills.component';
 import { EducationComponent } from './education/education.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    HttpClientModule
 
     
   ],

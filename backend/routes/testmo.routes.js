@@ -38,6 +38,8 @@ router.post('/',async(req,res)=>{
 
 
 router.get('/',async(req,res)=>{
+    res.header("Access-Control-Allow-Origin","*")
+    res.header("Access-Control-Allow-Methods: GET,POST,PUT,DELETE")
     try{
         let allTest=await testmonial.find();
         res.json({

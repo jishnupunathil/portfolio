@@ -19,6 +19,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { AkillsComponent } from './akills/akills.component';
 import { EducationComponent } from './education/education.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { EducationComponent } from './education/education.component';
     ContactComponent,
     AboutComponent,
     AkillsComponent,
-    EducationComponent
+    EducationComponent,
+    TestimonialComponent
   ],
   imports: [
     BrowserModule,

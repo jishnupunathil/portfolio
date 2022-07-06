@@ -5,7 +5,7 @@ const mongoose=require('mongoose')
 
 
 
-router.post('/',async(req,res)=>{
+router.post('/api/',async(req,res)=>{
     console.log('body',req.body);
     try{
 
@@ -37,7 +37,7 @@ router.post('/',async(req,res)=>{
 })
 
 
-router.get('/',async(req,res)=>{
+router.get('/api/',async(req,res)=>{
     res.header("Access-Control-Allow-Origin","*")
     res.header("Access-Control-Allow-Methods: GET,POST,PUT,DELETE")
     try{
@@ -57,7 +57,7 @@ router.get('/',async(req,res)=>{
 })
 
 
-router.get('/:id',async(req,res)=>{
+router.get('/api/:id',async(req,res)=>{
     let id=req.params.id
     console.log({id})
     let validId=mongoose.Types.ObjectId.isValid(id)
@@ -87,7 +87,7 @@ router.get('/:id',async(req,res)=>{
     }
 })
 
-router.put('/:id',async (req,res)=>{
+router.put('/api/:id',async (req,res)=>{
     let id=req.params.id
 
     let validId=mongoose.Types.ObjectId.isValid(id)
@@ -119,7 +119,7 @@ router.put('/:id',async (req,res)=>{
 })
 
 
-router.delete('/:id',async (req,res)=>{
+router.delete('/api/:id',async (req,res)=>{
     let id=req.params.id
 
     let validId=mongoose.Types.ObjectId.isValid(id)

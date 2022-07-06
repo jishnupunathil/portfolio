@@ -2,25 +2,20 @@ const express = require ('express')
 const app= express()
 const mongoose = require('mongoose')
 const bodyParser=require('body-parser')
+const path = require('path')
 
-// mongoose.connect('mongodb+srv://jishnu:uesHTxFngUxdbieB@cluster0.myxbs.mongodb.net/testmonial_db?retryWrites=true&w=majority')
-// .then((res)=>{
-//     console.log('database connected successfuly');
-// }).catch((err)=>{
-//     console.log('an error occured'+err);
-// })
 
 
 const testmoRouter= require('./routes/testmo.routes')
-// const testmonial=require('./src/model/testmonial')
 
 app.use(bodyParser.json())
 app.use('/testmo',testmoRouter)
+app.use(express.static('./dist/portfolio'));
 
+app.get('/*', function(req, res) {
+    res.sendFile(path.join(__dirname + '/dist/portfolio/index.html'))
+   });
 
-app.get('',(req,res)=>{
-    res.send('hello:uesHTxFngUxdbieB')
-})
 
 
 

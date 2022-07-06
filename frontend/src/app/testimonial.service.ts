@@ -8,8 +8,10 @@ export class TestimonialService {
 
   constructor(private http:HttpClient) { }
 
+  server_address:string='api'
+
 getTesti(){
-  return this.http.get<any>('http://localhost:5000/testmo')
+  return this.http.get<any>(`${this.server_address}/testmo`)
 }
 
 
